@@ -1,4 +1,4 @@
-class ProductsController::Item < ApplicationController
+class ProductsController < ApplicationController
   def index
       @cart = cart
   end
