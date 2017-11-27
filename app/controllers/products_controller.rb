@@ -1,9 +1,11 @@
 class ProductsController < ApplicationController
   def index
-   end
+      cart = @cart
+  end
 
-   def add_to_cart
-    cart << params[:product]
+  def add_to_cart
+    @item = Item.find(params[:id])
+    cart << @item.id
     render :index
-   end
+  end
 end
